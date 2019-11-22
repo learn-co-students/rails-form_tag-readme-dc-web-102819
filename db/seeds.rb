@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Post.destroy_all
+
+Post.create(title: "Rails 101", description: "Rails, it's harder than they said it'd be.")
+Post.create(title: "Rails 102", description: "Rails, maybe it's starting to make sense now?")
+Post.create(title: "Rails 103", description: "Rails, maybe it's magic, maybe it's Maybelline")
+Post.create(title: Faker::Lorem.words(number: 4).join(' '), description: Faker::Lorem.paragraphs[0])
+
